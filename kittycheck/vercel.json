@@ -1,10 +1,12 @@
 {
   "version": 2,
   "builds": [
-    { "src": "Interfaz/**", "use": "@vercel/static" }
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "Interfaz/$1" }
+    { "src": "/(.*)", "dest": "frontend/index.html" }
   ]
 }
-
