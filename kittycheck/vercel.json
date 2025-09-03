@@ -1,10 +1,10 @@
 {
+  "version": 2,
   "builds": [
-    { "src": "api/predict.py", "use": "@vercel/python" },
-    { "src": "frontend/index.html", "use": "@vercel/static" }
+    { "src": "Interfaz/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/predict.py" },
-    { "src": "/(.*)", "dest": "/frontend/index.html" }
+    { "src": "/(.*)", "dest": "Interfaz/$1" }
   ]
 }
+
